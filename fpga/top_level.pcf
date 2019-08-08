@@ -1,0 +1,237 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Apr 13 22:22:03 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "fx2Clk_in" LOCATE = SITE "C10" LEVEL 1;
+COMP "fx2Data_io<0>" LOCATE = SITE "A2" LEVEL 1;
+COMP "fx2Data_io<1>" LOCATE = SITE "D6" LEVEL 1;
+COMP "fx2Data_io<2>" LOCATE = SITE "C6" LEVEL 1;
+COMP "fx2Data_io<3>" LOCATE = SITE "B3" LEVEL 1;
+COMP "fx2Data_io<4>" LOCATE = SITE "A3" LEVEL 1;
+COMP "fx2Data_io<5>" LOCATE = SITE "B4" LEVEL 1;
+COMP "fx2Data_io<6>" LOCATE = SITE "A4" LEVEL 1;
+COMP "fx2Data_io<7>" LOCATE = SITE "C5" LEVEL 1;
+COMP "fx2Read_out" LOCATE = SITE "F13" LEVEL 1;
+COMP "uart_rx" LOCATE = SITE "A16" LEVEL 1;
+COMP "uart_tx" LOCATE = SITE "B16" LEVEL 1;
+COMP "fx2GotData_in" LOCATE = SITE "C15" LEVEL 1;
+COMP "left_button" LOCATE = SITE "P4" LEVEL 1;
+COMP "fx2GotRoom_in" LOCATE = SITE "A9" LEVEL 1;
+COMP "down_button" LOCATE = SITE "P3" LEVEL 1;
+COMP "led_out<0>" LOCATE = SITE "U18" LEVEL 1;
+COMP "led_out<1>" LOCATE = SITE "M14" LEVEL 1;
+COMP "led_out<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "led_out<3>" LOCATE = SITE "L14" LEVEL 1;
+COMP "led_out<4>" LOCATE = SITE "M13" LEVEL 1;
+COMP "led_out<5>" LOCATE = SITE "D4" LEVEL 1;
+COMP "led_out<6>" LOCATE = SITE "P16" LEVEL 1;
+COMP "led_out<7>" LOCATE = SITE "N12" LEVEL 1;
+COMP "up_button" LOCATE = SITE "N4" LEVEL 1;
+COMP "fx2Write_out" LOCATE = SITE "E13" LEVEL 1;
+COMP "right_button" LOCATE = SITE "F6" LEVEL 1;
+COMP "sw_in<0>" LOCATE = SITE "A10" LEVEL 1;
+COMP "sw_in<1>" LOCATE = SITE "D14" LEVEL 1;
+COMP "sw_in<2>" LOCATE = SITE "C14" LEVEL 1;
+COMP "sw_in<3>" LOCATE = SITE "P15" LEVEL 1;
+COMP "sw_in<4>" LOCATE = SITE "P12" LEVEL 1;
+COMP "sw_in<5>" LOCATE = SITE "R5" LEVEL 1;
+COMP "sw_in<6>" LOCATE = SITE "T5" LEVEL 1;
+COMP "sw_in<7>" LOCATE = SITE "E4" LEVEL 1;
+COMP "fx2PktEnd_out" LOCATE = SITE "C4" LEVEL 1;
+COMP "reset_button" LOCATE = SITE "F5" LEVEL 1;
+COMP "fx2Addr_out<0>" LOCATE = SITE "A14" LEVEL 1;
+COMP "fx2Addr_out<1>" LOCATE = SITE "B14" LEVEL 1;
+COMP "fx2OE_out" LOCATE = SITE "A15" LEVEL 1;
+TIMEGRP fx2Clk_in = BEL "uart_tx_data_0" BEL "uart_tx_data_1" BEL
+        "uart_tx_data_2" BEL "uart_tx_data_3" BEL "uart_tx_data_4" BEL
+        "uart_tx_data_5" BEL "uart_tx_data_6" BEL "uart_tx_data_7" BEL
+        "rx_data_temp_0" BEL "rx_data_temp_1" BEL "rx_data_temp_2" BEL
+        "rx_data_temp_3" BEL "rx_data_temp_4" BEL "rx_data_temp_5" BEL
+        "rx_data_temp_6" BEL "rx_data_temp_7" BEL "f2hData_0" BEL "f2hData_1"
+        BEL "f2hData_2" BEL "f2hData_3" BEL "f2hData_4" BEL "f2hData_5" BEL
+        "f2hData_6" BEL "f2hData_7" BEL "output_next_2" BEL "count_o_0" BEL
+        "count_o_1" BEL "count_o_2" BEL "count_o_3" BEL "output_next_1" BEL
+        "output_next_0" BEL "fromhost_0" BEL "fromhost_1" BEL "fromhost_2" BEL
+        "fromhost_3" BEL "fromhost_4" BEL "fromhost_5" BEL "fromhost_6" BEL
+        "fromhost_7" BEL "fromhost_8" BEL "fromhost_9" BEL "fromhost_10" BEL
+        "fromhost_11" BEL "fromhost_12" BEL "fromhost_13" BEL "fromhost_14"
+        BEL "fromhost_15" BEL "fromhost_16" BEL "fromhost_17" BEL
+        "fromhost_18" BEL "fromhost_19" BEL "fromhost_20" BEL "fromhost_21"
+        BEL "fromhost_22" BEL "fromhost_23" BEL "fromhost_24" BEL
+        "fromhost_25" BEL "fromhost_26" BEL "fromhost_27" BEL "fromhost_28"
+        BEL "fromhost_29" BEL "fromhost_30" BEL "fromhost_31" BEL "endecrypt"
+        BEL "dereset" BEL "button_state_0" BEL "button_state_1" BEL "count_0"
+        BEL "count_1" BEL "count_2" BEL "inputs_0" BEL "inputs_1" BEL
+        "inputs_2" BEL "inputs_3" BEL "inputs_4" BEL "inputs_5" BEL "inputs_6"
+        BEL "inputs_7" BEL "inputs_8" BEL "inputs_9" BEL "inputs_10" BEL
+        "inputs_11" BEL "inputs_12" BEL "inputs_13" BEL "inputs_14" BEL
+        "inputs_15" BEL "inputs_16" BEL "inputs_17" BEL "inputs_18" BEL
+        "inputs_19" BEL "inputs_20" BEL "inputs_21" BEL "inputs_22" BEL
+        "inputs_23" BEL "inputs_24" BEL "inputs_25" BEL "inputs_26" BEL
+        "inputs_27" BEL "inputs_28" BEL "inputs_29" BEL "inputs_30" BEL
+        "inputs_31" BEL "inputs_32" BEL "inputs_33" BEL "inputs_34" BEL
+        "inputs_35" BEL "inputs_36" BEL "inputs_37" BEL "inputs_38" BEL
+        "inputs_39" BEL "inputs_40" BEL "inputs_41" BEL "inputs_42" BEL
+        "inputs_43" BEL "inputs_44" BEL "inputs_45" BEL "inputs_46" BEL
+        "inputs_47" BEL "inputs_48" BEL "inputs_49" BEL "inputs_50" BEL
+        "inputs_51" BEL "inputs_52" BEL "inputs_53" BEL "inputs_54" BEL
+        "inputs_55" BEL "inputs_56" BEL "inputs_57" BEL "inputs_58" BEL
+        "inputs_59" BEL "inputs_60" BEL "inputs_61" BEL "inputs_62" BEL
+        "inputs_63" BEL "enencrypt" BEL "enreset" BEL "tohost_0" BEL
+        "tohost_1" BEL "tohost_2" BEL "tohost_3" BEL "tohost_4" BEL "tohost_5"
+        BEL "tohost_6" BEL "tohost_7" BEL "tohost_10" BEL "count_cycles_0" BEL
+        "count_cycles_1" BEL "count_cycles_2" BEL "count_cycles_3" BEL
+        "count_cycles_4" BEL "count_cycles_5" BEL "count_cycles_6" BEL
+        "count_cycles_7" BEL "count_cycles_8" BEL "count_cycles_9" BEL
+        "count_cycles_10" BEL "count_cycles_11" BEL "count_cycles_12" BEL
+        "count_cycles_13" BEL "count_cycles_14" BEL "count_cycles_15" BEL
+        "count_cycles_16" BEL "count_cycles_17" BEL "count_cycles_18" BEL
+        "count_cycles_19" BEL "count_cycles_20" BEL "count_cycles_21" BEL
+        "count_cycles_22" BEL "count_cycles_23" BEL "count_cycles_24" BEL
+        "count_cycles_25" BEL "count_cycles_26" BEL "count_cycles_27" BEL
+        "count_cycles_28" BEL "count_cycles_29" BEL "count_cycles_30" BEL
+        "count_cycles_31" BEL "count_cycles_32" BEL "count_cycles_33" BEL
+        "state_FSM_FFd4" BEL "state_FSM_FFd3" BEL "state_FSM_FFd2" BEL
+        "state_FSM_FFd1" BEL "main_state_FSM_FFd3" BEL "main_state_FSM_FFd2"
+        BEL "main_state_FSM_FFd1" BEL "comm_fpga_fx2/state_FSM_FFd1" BEL
+        "comm_fpga_fx2/state_FSM_FFd2" BEL "comm_fpga_fx2/state_FSM_FFd3" BEL
+        "comm_fpga_fx2/state_FSM_FFd4" BEL "comm_fpga_fx2/count_16" BEL
+        "comm_fpga_fx2/count_15" BEL "comm_fpga_fx2/count_14" BEL
+        "comm_fpga_fx2/count_13" BEL "comm_fpga_fx2/count_12" BEL
+        "comm_fpga_fx2/count_11" BEL "comm_fpga_fx2/count_10" BEL
+        "comm_fpga_fx2/count_9" BEL "comm_fpga_fx2/count_8" BEL
+        "comm_fpga_fx2/count_7" BEL "comm_fpga_fx2/count_6" BEL
+        "comm_fpga_fx2/count_5" BEL "comm_fpga_fx2/count_4" BEL
+        "comm_fpga_fx2/count_3" BEL "comm_fpga_fx2/count_2" BEL
+        "comm_fpga_fx2/count_1" BEL "comm_fpga_fx2/count_0" BEL
+        "comm_fpga_fx2/isWrite" BEL "comm_fpga_fx2/chanAddr_6" BEL
+        "comm_fpga_fx2/chanAddr_5" BEL "comm_fpga_fx2/chanAddr_4" BEL
+        "comm_fpga_fx2/chanAddr_3" BEL "comm_fpga_fx2/chanAddr_2" BEL
+        "comm_fpga_fx2/chanAddr_1" BEL "comm_fpga_fx2/chanAddr_0" BEL
+        "basic_uart_inst/rx_state_counter_3" BEL
+        "basic_uart_inst/rx_state_counter_2" BEL
+        "basic_uart_inst/rx_state_counter_1" BEL
+        "basic_uart_inst/rx_state_counter_0" BEL
+        "basic_uart_inst/rx_state_nbits_3" BEL
+        "basic_uart_inst/rx_state_nbits_2" BEL
+        "basic_uart_inst/rx_state_nbits_1" BEL
+        "basic_uart_inst/rx_state_nbits_0" BEL
+        "basic_uart_inst/tx_state_counter_3" BEL
+        "basic_uart_inst/tx_state_counter_2" BEL
+        "basic_uart_inst/tx_state_counter_1" BEL
+        "basic_uart_inst/tx_state_counter_0" BEL
+        "basic_uart_inst/sample_counter_10" BEL
+        "basic_uart_inst/sample_counter_9" BEL
+        "basic_uart_inst/sample_counter_8" BEL
+        "basic_uart_inst/sample_counter_7" BEL
+        "basic_uart_inst/sample_counter_6" BEL
+        "basic_uart_inst/sample_counter_5" BEL
+        "basic_uart_inst/sample_counter_4" BEL
+        "basic_uart_inst/sample_counter_3" BEL
+        "basic_uart_inst/sample_counter_2" BEL
+        "basic_uart_inst/sample_counter_1" BEL
+        "basic_uart_inst/sample_counter_0" BEL
+        "basic_uart_inst/tx_state_nbits_3" BEL
+        "basic_uart_inst/tx_state_nbits_2" BEL
+        "basic_uart_inst/tx_state_nbits_1" BEL
+        "basic_uart_inst/tx_state_nbits_0" BEL
+        "basic_uart_inst/tx_state_bits_8" BEL
+        "basic_uart_inst/tx_state_bits_7" BEL
+        "basic_uart_inst/tx_state_bits_6" BEL
+        "basic_uart_inst/tx_state_bits_5" BEL
+        "basic_uart_inst/tx_state_bits_4" BEL
+        "basic_uart_inst/tx_state_bits_3" BEL
+        "basic_uart_inst/tx_state_bits_2" BEL
+        "basic_uart_inst/tx_state_bits_1" BEL
+        "basic_uart_inst/tx_state_bits_0" BEL
+        "basic_uart_inst/rx_state_enable" BEL
+        "basic_uart_inst/rx_state_bits_7" BEL
+        "basic_uart_inst/rx_state_bits_6" BEL
+        "basic_uart_inst/rx_state_bits_5" BEL
+        "basic_uart_inst/rx_state_bits_4" BEL
+        "basic_uart_inst/rx_state_bits_3" BEL
+        "basic_uart_inst/rx_state_bits_2" BEL
+        "basic_uart_inst/rx_state_bits_1" BEL
+        "basic_uart_inst/rx_state_bits_0" BEL
+        "basic_uart_inst/rx_state_fsm_state" BEL "basic_uart_inst/sample" BEL
+        "encrypt/EL/tempT_3" BEL "encrypt/EL/tempT_2" BEL "encrypt/EL/tempT_1"
+        BEL "encrypt/EL/tempT_0" BEL "encrypt/EL/C_25" BEL "encrypt/EL/C_24"
+        BEL "encrypt/EL/C_23" BEL "encrypt/EL/C_19" BEL "encrypt/EL/C_18" BEL
+        "encrypt/EL/C_17" BEL "encrypt/EL/C_16" BEL "encrypt/EL/C_10" BEL
+        "encrypt/EL/C_7" BEL "encrypt/EL/C_6" BEL "encrypt/EL/C_5" BEL
+        "encrypt/EL/C_4" BEL "encrypt/EL/C_3" BEL "encrypt/EL/C_2" BEL
+        "encrypt/EL/C_1" BEL "encrypt/EL/C_0" BEL "encrypt/EL/tempCont_31" BEL
+        "encrypt/EL/tempCont_30" BEL "encrypt/EL/tempCont_29" BEL
+        "encrypt/EL/tempCont_28" BEL "encrypt/EL/tempCont_27" BEL
+        "encrypt/EL/tempCont_26" BEL "encrypt/EL/tempCont_25" BEL
+        "encrypt/EL/tempCont_24" BEL "encrypt/EL/tempCont_23" BEL
+        "encrypt/EL/tempCont_22" BEL "encrypt/EL/tempCont_21" BEL
+        "encrypt/EL/tempCont_20" BEL "encrypt/EL/tempCont_19" BEL
+        "encrypt/EL/tempCont_18" BEL "encrypt/EL/tempCont_17" BEL
+        "encrypt/EL/tempCont_16" BEL "encrypt/EL/tempCont_15" BEL
+        "encrypt/EL/tempCont_14" BEL "encrypt/EL/tempCont_13" BEL
+        "encrypt/EL/tempCont_12" BEL "encrypt/EL/tempCont_11" BEL
+        "encrypt/EL/tempCont_10" BEL "encrypt/EL/tempCont_9" BEL
+        "encrypt/EL/tempCont_8" BEL "encrypt/EL/tempCont_7" BEL
+        "encrypt/EL/tempCont_6" BEL "encrypt/EL/tempCont_5" BEL
+        "encrypt/EL/tempCont_4" BEL "encrypt/EL/tempCont_3" BEL
+        "encrypt/EL/tempCont_2" BEL "encrypt/EL/tempCont_1" BEL
+        "encrypt/EL/tempCont_0" BEL "encrypt/EL/done" BEL
+        "encrypt/EL/tempC_31" BEL "encrypt/EL/tempC_30" BEL
+        "encrypt/EL/tempC_29" BEL "encrypt/EL/tempC_28" BEL
+        "encrypt/EL/tempC_24" BEL "encrypt/EL/tempC_23" BEL
+        "encrypt/EL/tempC_21" BEL "encrypt/EL/tempC_18" BEL
+        "encrypt/EL/tempC_7" BEL "encrypt/EL/tempC_6" BEL "encrypt/EL/tempC_5"
+        BEL "encrypt/EL/tempC_4" BEL "encrypt/EL/tempC_3" BEL
+        "encrypt/EL/tempC_2" BEL "encrypt/EL/tempC_1" BEL "encrypt/EL/tempC_0"
+        BEL "decrypt/EL/tempT_3" BEL "decrypt/EL/tempT_2" BEL
+        "decrypt/EL/tempT_1" BEL "decrypt/EL/tempT_0" BEL "decrypt/EL/P_31"
+        BEL "decrypt/EL/P_30" BEL "decrypt/EL/P_29" BEL "decrypt/EL/P_28" BEL
+        "decrypt/EL/P_27" BEL "decrypt/EL/P_26" BEL "decrypt/EL/P_25" BEL
+        "decrypt/EL/P_24" BEL "decrypt/EL/P_23" BEL "decrypt/EL/P_22" BEL
+        "decrypt/EL/P_21" BEL "decrypt/EL/P_20" BEL "decrypt/EL/P_19" BEL
+        "decrypt/EL/P_18" BEL "decrypt/EL/P_17" BEL "decrypt/EL/P_16" BEL
+        "decrypt/EL/P_15" BEL "decrypt/EL/P_14" BEL "decrypt/EL/P_13" BEL
+        "decrypt/EL/P_12" BEL "decrypt/EL/P_11" BEL "decrypt/EL/P_10" BEL
+        "decrypt/EL/P_9" BEL "decrypt/EL/P_8" BEL "decrypt/EL/P_7" BEL
+        "decrypt/EL/P_6" BEL "decrypt/EL/P_5" BEL "decrypt/EL/P_4" BEL
+        "decrypt/EL/P_3" BEL "decrypt/EL/P_2" BEL "decrypt/EL/P_1" BEL
+        "decrypt/EL/P_0" BEL "decrypt/EL/tempCont_31" BEL
+        "decrypt/EL/tempCont_30" BEL "decrypt/EL/tempCont_29" BEL
+        "decrypt/EL/tempCont_28" BEL "decrypt/EL/tempCont_27" BEL
+        "decrypt/EL/tempCont_26" BEL "decrypt/EL/tempCont_25" BEL
+        "decrypt/EL/tempCont_24" BEL "decrypt/EL/tempCont_23" BEL
+        "decrypt/EL/tempCont_22" BEL "decrypt/EL/tempCont_21" BEL
+        "decrypt/EL/tempCont_20" BEL "decrypt/EL/tempCont_19" BEL
+        "decrypt/EL/tempCont_18" BEL "decrypt/EL/tempCont_17" BEL
+        "decrypt/EL/tempCont_16" BEL "decrypt/EL/tempCont_15" BEL
+        "decrypt/EL/tempCont_14" BEL "decrypt/EL/tempCont_13" BEL
+        "decrypt/EL/tempCont_12" BEL "decrypt/EL/tempCont_11" BEL
+        "decrypt/EL/tempCont_10" BEL "decrypt/EL/tempCont_9" BEL
+        "decrypt/EL/tempCont_8" BEL "decrypt/EL/tempCont_7" BEL
+        "decrypt/EL/tempCont_6" BEL "decrypt/EL/tempCont_5" BEL
+        "decrypt/EL/tempCont_4" BEL "decrypt/EL/tempCont_3" BEL
+        "decrypt/EL/tempCont_2" BEL "decrypt/EL/tempCont_1" BEL
+        "decrypt/EL/tempCont_0" BEL "decrypt/EL/done" BEL
+        "decrypt/EL/tempP_31" BEL "decrypt/EL/tempP_30" BEL
+        "decrypt/EL/tempP_29" BEL "decrypt/EL/tempP_28" BEL
+        "decrypt/EL/tempP_27" BEL "decrypt/EL/tempP_26" BEL
+        "decrypt/EL/tempP_25" BEL "decrypt/EL/tempP_24" BEL
+        "decrypt/EL/tempP_23" BEL "decrypt/EL/tempP_22" BEL
+        "decrypt/EL/tempP_21" BEL "decrypt/EL/tempP_20" BEL
+        "decrypt/EL/tempP_19" BEL "decrypt/EL/tempP_18" BEL
+        "decrypt/EL/tempP_17" BEL "decrypt/EL/tempP_16" BEL
+        "decrypt/EL/tempP_15" BEL "decrypt/EL/tempP_14" BEL
+        "decrypt/EL/tempP_13" BEL "decrypt/EL/tempP_12" BEL
+        "decrypt/EL/tempP_11" BEL "decrypt/EL/tempP_10" BEL
+        "decrypt/EL/tempP_9" BEL "decrypt/EL/tempP_8" BEL "decrypt/EL/tempP_7"
+        BEL "decrypt/EL/tempP_6" BEL "decrypt/EL/tempP_5" BEL
+        "decrypt/EL/tempP_4" BEL "decrypt/EL/tempP_3" BEL "decrypt/EL/tempP_2"
+        BEL "decrypt/EL/tempP_1" BEL "decrypt/EL/tempP_0" BEL "three_sec" BEL
+        "rx_flag" BEL "basic_uart_inst/tx_state_ready" BEL "emitting" BEL
+        "display" BEL "uart_tx_enable" BEL "flag_2" BEL
+        "comm_fpga_fx2/isAligned" BEL "fx2Clk_in_BUFGP/BUFG";
+TS_clk = PERIOD TIMEGRP "fx2Clk_in" 20 ns HIGH 50%;
+SCHEMATIC END;
+

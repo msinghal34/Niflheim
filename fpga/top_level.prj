@@ -1,0 +1,8 @@
+vhdl work "tgen.vhdl"
+vhdl work "enloop.vhdl"
+vhdl work "deloop.vhdl"
+vhdl work "encrypter.vhdl"
+vhdl work "decrypter.vhdl"
+vhdl work "comm_fpga_fx2.vhdl"
+vhdl work "basic_uart.vhd"
+vhdl work "top_level.vhdl"

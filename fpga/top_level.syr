@@ -1,0 +1,854 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: top_level.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_level.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_level"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : top_level
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/guptaji/DLD_Proj/tgen.vhdl" into library work
+Parsing entity <tgen>.
+Parsing architecture <Behavioral> of entity <tgen>.
+Parsing VHDL file "/home/guptaji/DLD_Proj/enloop.vhdl" into library work
+Parsing entity <enloop>.
+Parsing architecture <Behavioral> of entity <enloop>.
+Parsing VHDL file "/home/guptaji/DLD_Proj/deloop.vhdl" into library work
+Parsing entity <deloop>.
+Parsing architecture <Behavioral> of entity <deloop>.
+Parsing VHDL file "/home/guptaji/DLD_Proj/encrypter.vhdl" into library work
+Parsing entity <encrypter>.
+Parsing architecture <Behavioral> of entity <encrypter>.
+Parsing VHDL file "/home/guptaji/DLD_Proj/decrypter.vhdl" into library work
+Parsing entity <decrypter>.
+Parsing architecture <Behavioral> of entity <decrypter>.
+Parsing VHDL file "/home/guptaji/DLD_Proj/comm_fpga_fx2.vhdl" into library work
+Parsing entity <comm_fpga_fx2>.
+Parsing architecture <rtl> of entity <comm_fpga_fx2>.
+Parsing VHDL file "/home/guptaji/DLD_Proj/basic_uart.vhd" into library work
+Parsing entity <basic_uart>.
+Parsing architecture <Behavioral> of entity <basic_uart>.
+Parsing VHDL file "/home/guptaji/DLD_Proj/top_level.vhdl" into library work
+Parsing entity <top_level>.
+Parsing architecture <structural> of entity <top_level>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <top_level> (architecture <structural>) from library <work>.
+
+Elaborating entity <basic_uart> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <comm_fpga_fx2> (architecture <rtl>) from library <work>.
+
+Elaborating entity <encrypter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tgen> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <enloop> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <decrypter> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <deloop> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_level>.
+    Related source file is "/home/guptaji/DLD_Proj/top_level.vhdl".
+    Found 1-bit register for signal <three_sec>.
+    Found 34-bit register for signal <count_cycles>.
+    Found 3-bit register for signal <main_state>.
+    Found 1-bit register for signal <rx_flag>.
+    Found 8-bit register for signal <rx_data_temp>.
+    Found 4-bit register for signal <state>.
+    Found 1-bit register for signal <uart_tx_enable>.
+    Found 2-bit register for signal <button_state>.
+    Found 1-bit register for signal <flag_2>.
+    Found 1-bit register for signal <display>.
+    Found 1-bit register for signal <enencrypt>.
+    Found 1-bit register for signal <endecrypt>.
+    Found 1-bit register for signal <enreset>.
+    Found 1-bit register for signal <dereset>.
+    Found 4-bit register for signal <count_o>.
+    Found 3-bit register for signal <count>.
+    Found 1-bit register for signal <output_next<2>>.
+    Found 1-bit register for signal <output_next<1>>.
+    Found 1-bit register for signal <output_next<0>>.
+    Found 7-bit register for signal <chan_out>.
+    Found 7-bit register for signal <chan_in>.
+    Found 32-bit register for signal <tohost>.
+    Found 8-bit register for signal <f2hData>.
+    Found 32-bit register for signal <fromhost>.
+    Found 64-bit register for signal <inputs>.
+    Found 8-bit register for signal <uart_tx_data>.
+    Found 1-bit register for signal <emitting>.
+    Found finite state machine <FSM_0> for signal <main_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 28                                             |
+    | Inputs             | 19                                             |
+    | Outputs            | 3                                              |
+    | Clock              | fx2Clk_in (rising_edge)                        |
+    | Reset              | reset_button (positive)                        |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 001                                            |
+    | Power Up State     | 001                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 41                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 21                                             |
+    | Clock              | fx2Clk_in (rising_edge)                        |
+    | Clock enable       | _n1817 (negative)                              |
+    | Reset              | main_state[2] (positive)                       |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 1111                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit subtractor for signal <GND_4_o_GND_4_o_sub_538_OUT> created at line 436.
+    Found 5-bit subtractor for signal <GND_4_o_GND_4_o_sub_564_OUT> created at line 469.
+    Found 4-bit subtractor for signal <GND_4_o_GND_4_o_sub_979_OUT> created at line 569.
+    Found 5-bit subtractor for signal <GND_4_o_GND_4_o_sub_1121_OUT> created at line 635.
+    Found 7-bit adder for signal <GND_4_o_GND_4_o_add_456_OUT> created at line 433.
+    Found 7-bit adder for signal <n1155> created at line 436.
+    Found 4-bit adder for signal <count_o[3]_GND_4_o_add_562_OUT> created at line 1241.
+    Found 8-bit adder for signal <n1178> created at line 469.
+    Found 8-bit adder for signal <n1179> created at line 455.
+    Found 8-bit adder for signal <n1180> created at line 457.
+    Found 4-bit adder for signal <n1181> created at line 1241.
+    Found 4-bit adder for signal <n1183> created at line 1241.
+    Found 8-bit adder for signal <n1184> created at line 510.
+    Found 7-bit adder for signal <n1330> created at line 569.
+    Found 3-bit adder for signal <count[2]_GND_4_o_add_1000_OUT> created at line 1241.
+    Found 34-bit adder for signal <count_cycles[33]_GND_4_o_add_1039_OUT> created at line 1241.
+    Found 8-bit adder for signal <n1423> created at line 633.
+    Found 8-bit adder for signal <n1424> created at line 634.
+    Found 8-bit adder for signal <n1426> created at line 635.
+    Found 3-bit subtractor for signal <GND_4_o_GND_4_o_sub_814_OUT<2:0>> created at line 507.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_4_o_inputs[63]_Mux_451_o> created at line 431.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_4_o_inputs[63]_Mux_454_o> created at line 432.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_4_o_inputs[63]_Mux_585_o> created at line 455.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_4_o_inputs[63]_Mux_591_o> created at line 457.
+    Found 1-bit 8-to-1 multiplexer for signal <count_o[2]_sw_in[7]_Mux_605_o> created at line 488.
+    Found 1-bit 8-to-1 multiplexer for signal <count_o[3]_sw_in[7]_Mux_607_o> created at line 489.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_4_o_sw_in[7]_Mux_814_o> created at line 507.
+    Found 1-bit 8-to-1 multiplexer for signal <count_o[3]_sw_in[7]_Mux_816_o> created at line 508.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_4_o_inputs[63]_Mux_820_o> created at line 510.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_4_o_inputs[63]_Mux_1116_o> created at line 633.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_4_o_inputs[63]_Mux_1119_o> created at line 634.
+    Found 1-bit 64-to-1 multiplexer for signal <GND_4_o_inputs[63]_Mux_1122_o> created at line 635.
+    Found 2-bit 4-to-1 multiplexer for signal <PWR_4_o_PWR_4_o_mux_1019_OUT> created at line 560.
+    Found 2-bit 4-to-1 multiplexer for signal <PWR_4_o_PWR_4_o_mux_1035_OUT> created at line 593.
+    Found 1-bit tristate buffer for signal <fx2Addr_out<0>> created at line 26
+    Found 3-bit comparator greater for signal <count[2]_INV_114_o> created at line 410
+    Found 7-bit comparator equal for signal <chan_in[6]_chanAddr[6]_equal_398_o> created at line 412
+    Found 4-bit comparator greater for signal <n0394> created at line 448
+    Found 4-bit comparator greater for signal <n0415> created at line 483
+    Found 4-bit comparator greater for signal <GND_4_o_count_o[3]_LessThan_818_o> created at line 509
+    Found 7-bit comparator equal for signal <chan_out[6]_chanAddr[6]_equal_978_o> created at line 568
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <button_state> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred  20 Adder/Subtractor(s).
+	inferred 222 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred 490 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   2 Finite State Machine(s).
+Unit <top_level> synthesized.
+
+Synthesizing Unit <basic_uart>.
+    Related source file is "/home/guptaji/DLD_Proj/basic_uart.vhd".
+        DIVISOR = 1250
+    Found 1-bit register for signal <tx_state_ready>.
+    Found 9-bit register for signal <tx_state_bits>.
+    Found 8-bit register for signal <rx_state_bits>.
+    Found 4-bit register for signal <rx_state_nbits>.
+    Found 4-bit register for signal <tx_state_nbits>.
+    Found 11-bit register for signal <sample_counter>.
+    Found 1-bit register for signal <sample>.
+    Found 1-bit register for signal <rx_state_fsm_state>.
+    Found 1-bit register for signal <rx_state_enable>.
+    Found 1-bit register for signal <tx_state_fsm_state>.
+    Found 4-bit register for signal <rx_state_counter>.
+    Found 4-bit register for signal <tx_state_counter>.
+    Found 11-bit adder for signal <sample_counter[10]_GND_8_o_add_1_OUT> created at line 74.
+    Found 4-bit adder for signal <rx_state_nbits[3]_GND_8_o_add_14_OUT> created at line 125.
+    Found 4-bit adder for signal <rx_state_counter[3]_GND_8_o_add_19_OUT> created at line 128.
+    Found 4-bit adder for signal <tx_state_counter[3]_GND_8_o_add_40_OUT> created at line 180.
+    Found 4-bit subtractor for signal <GND_8_o_GND_8_o_sub_34_OUT<3:0>> created at line 177.
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred  12 Multiplexer(s).
+Unit <basic_uart> synthesized.
+
+Synthesizing Unit <comm_fpga_fx2>.
+    Related source file is "/home/guptaji/DLD_Proj/comm_fpga_fx2.vhdl".
+    Found 17-bit register for signal <count>.
+    Found 7-bit register for signal <chanAddr>.
+    Found 1-bit register for signal <isWrite>.
+    Found 1-bit register for signal <isAligned>.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_5> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk_in (rising_edge)                           |
+    | Power Up State     | s_reset                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 17-bit subtractor for signal <GND_11_o_GND_11_o_sub_21_OUT<16:0>> created at line 1308.
+    Found 1-bit tristate buffer for signal <fifoOp<1>> created at line 106
+    Found 1-bit tristate buffer for signal <fifoOp<0>> created at line 106
+    Found 1-bit tristate buffer for signal <fx2PktEnd_out> created at line 106
+    Found 1-bit tristate buffer for signal <fx2FifoSel_out> created at line 106
+    Found 1-bit tristate buffer for signal <fx2Data_io<7>> created at line 233
+    Found 1-bit tristate buffer for signal <fx2Data_io<6>> created at line 233
+    Found 1-bit tristate buffer for signal <fx2Data_io<5>> created at line 233
+    Found 1-bit tristate buffer for signal <fx2Data_io<4>> created at line 233
+    Found 1-bit tristate buffer for signal <fx2Data_io<3>> created at line 233
+    Found 1-bit tristate buffer for signal <fx2Data_io<2>> created at line 233
+    Found 1-bit tristate buffer for signal <fx2Data_io<1>> created at line 233
+    Found 1-bit tristate buffer for signal <fx2Data_io<0>> created at line 233
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred  27 Multiplexer(s).
+	inferred  12 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <comm_fpga_fx2> synthesized.
+
+Synthesizing Unit <encrypter>.
+    Related source file is "/home/guptaji/DLD_Proj/encrypter.vhdl".
+    Summary:
+	no macro.
+Unit <encrypter> synthesized.
+
+Synthesizing Unit <tgen>.
+    Related source file is "/home/guptaji/DLD_Proj/tgen.vhdl".
+    Summary:
+Unit <tgen> synthesized.
+
+Synthesizing Unit <enloop>.
+    Related source file is "/home/guptaji/DLD_Proj/enloop.vhdl".
+    Found 32-bit register for signal <tempCont>.
+    Found 32-bit register for signal <tempC>.
+    Found 32-bit register for signal <C>.
+    Found 1-bit register for signal <done>.
+    Found 4-bit register for signal <tempT>.
+    Found 4-bit adder for signal <tempT[3]_GND_27_o_add_4_OUT> created at line 67.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 101 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <enloop> synthesized.
+
+Synthesizing Unit <decrypter>.
+    Related source file is "/home/guptaji/DLD_Proj/decrypter.vhdl".
+    Summary:
+	no macro.
+Unit <decrypter> synthesized.
+
+Synthesizing Unit <deloop>.
+    Related source file is "/home/guptaji/DLD_Proj/deloop.vhdl".
+    Found 32-bit register for signal <tempCont>.
+    Found 32-bit register for signal <tempP>.
+    Found 32-bit register for signal <P>.
+    Found 1-bit register for signal <done>.
+    Found 4-bit register for signal <tempT>.
+    Found 4-bit adder for signal <T[3]_PWR_33_o_add_1_OUT> created at line 61.
+    Found 4-bit adder for signal <tempT[3]_PWR_33_o_add_6_OUT> created at line 67.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 101 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <deloop> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 28
+ 11-bit adder                                          : 1
+ 17-bit subtractor                                     : 1
+ 3-bit adder                                           : 1
+ 3-bit subtractor                                      : 1
+ 34-bit adder                                          : 1
+ 4-bit adder                                           : 8
+ 4-bit subtractor                                      : 3
+ 5-bit subtractor                                      : 2
+ 7-bit adder                                           : 3
+ 8-bit adder                                           : 7
+# Registers                                            : 51
+ 1-bit register                                        : 22
+ 11-bit register                                       : 1
+ 17-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 8
+ 34-bit register                                       : 1
+ 4-bit register                                        : 7
+ 64-bit register                                       : 1
+ 7-bit register                                        : 3
+ 8-bit register                                        : 4
+ 9-bit register                                        : 1
+# Comparators                                          : 6
+ 3-bit comparator greater                              : 1
+ 4-bit comparator greater                              : 3
+ 7-bit comparator equal                                : 2
+# Multiplexers                                         : 535
+ 1-bit 2-to-1 multiplexer                              : 451
+ 1-bit 64-to-1 multiplexer                             : 8
+ 1-bit 8-to-1 multiplexer                              : 4
+ 11-bit 2-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 7
+ 2-bit 4-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 21
+ 32-bit 2-to-1 multiplexer                             : 5
+ 34-bit 2-to-1 multiplexer                             : 16
+ 4-bit 2-to-1 multiplexer                              : 7
+ 64-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 3
+# Tristates                                            : 13
+ 1-bit tristate buffer                                 : 13
+# FSMs                                                 : 3
+# Xors                                                 : 10
+ 1-bit xor8                                            : 8
+ 32-bit xor2                                           : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <chan_out_0> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_out_1> (without init value) has a constant value of 1 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_out_2> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_out_3> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_out_4> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_out_5> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_out_6> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_0> (without init value) has a constant value of 1 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_1> (without init value) has a constant value of 1 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_2> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_3> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_4> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_5> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_6> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <chan_out<6:2>> (without init value) have a constant value of 0 in block <top_level>.
+WARNING:Xst:2404 -  FFs/Latches <chan_in<6:2>> (without init value) have a constant value of 0 in block <top_level>.
+
+Synthesizing (advanced) Unit <basic_uart>.
+The following registers are absorbed into counter <sample_counter>: 1 register on signal <sample_counter>.
+The following registers are absorbed into counter <rx_state_nbits>: 1 register on signal <rx_state_nbits>.
+The following registers are absorbed into counter <rx_state_counter>: 1 register on signal <rx_state_counter>.
+The following registers are absorbed into counter <tx_state_counter>: 1 register on signal <tx_state_counter>.
+Unit <basic_uart> synthesized (advanced).
+
+Synthesizing (advanced) Unit <enloop>.
+The following registers are absorbed into counter <tempT>: 1 register on signal <tempT>.
+Unit <enloop> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 23
+ 17-bit subtractor                                     : 1
+ 3-bit adder                                           : 3
+ 3-bit subtractor                                      : 3
+ 34-bit adder                                          : 1
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 3
+ 6-bit adder                                           : 8
+ 7-bit adder                                           : 2
+# Counters                                             : 5
+ 11-bit up counter                                     : 1
+ 4-bit up counter                                      : 4
+# Registers                                            : 462
+ Flip-Flops                                            : 462
+# Comparators                                          : 6
+ 3-bit comparator greater                              : 1
+ 4-bit comparator greater                              : 3
+ 7-bit comparator equal                                : 2
+# Multiplexers                                         : 532
+ 1-bit 2-to-1 multiplexer                              : 451
+ 1-bit 64-to-1 multiplexer                             : 8
+ 1-bit 8-to-1 multiplexer                              : 4
+ 17-bit 2-to-1 multiplexer                             : 3
+ 2-bit 2-to-1 multiplexer                              : 7
+ 2-bit 4-to-1 multiplexer                              : 2
+ 3-bit 2-to-1 multiplexer                              : 21
+ 32-bit 2-to-1 multiplexer                             : 5
+ 34-bit 2-to-1 multiplexer                             : 16
+ 4-bit 2-to-1 multiplexer                              : 5
+ 64-bit 2-to-1 multiplexer                             : 3
+ 8-bit 2-to-1 multiplexer                              : 4
+ 9-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 3
+# Xors                                                 : 10
+ 1-bit xor8                                            : 8
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <chan_out_0> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_out_1> (without init value) has a constant value of 1 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_0> (without init value) has a constant value of 1 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <chan_in_1> (without init value) has a constant value of 1 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_3> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 1111  | 1111
+ 0001  | 0001
+ 0000  | 0000
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <main_state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 001   | 000
+ 010   | 001
+ 011   | 011
+ 100   | 010
+ 101   | 110
+ 110   | 111
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <comm_fpga_fx2/FSM_5> on signal <state[1:4]> with user encoding.
+------------------------------------
+ State                  | Encoding
+------------------------------------
+ s_reset                | 0000
+ s_idle                 | 0001
+ s_get_count0           | 0010
+ s_get_count1           | 0011
+ s_begin_write          | 0100
+ s_write                | 0101
+ s_end_write_aligned    | 0110
+ s_end_write_nonaligned | 0111
+ s_read                 | 1000
+------------------------------------
+WARNING:Xst:1710 - FF/Latch <tohost_8> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_9> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_11> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_12> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_14> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_15> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_16> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_18> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_19> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_25> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_27> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_28> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_29> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tohost_31> (without init value) has a constant value of 0 in block <top_level>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <tohost_10> in Unit <top_level> is equivalent to the following 9 FFs/Latches, which will be removed : <tohost_13> <tohost_17> <tohost_20> <tohost_21> <tohost_22> <tohost_23> <tohost_24> <tohost_26> <tohost_30> 
+
+Optimizing unit <top_level> ...
+
+Optimizing unit <basic_uart> ...
+
+Optimizing unit <enloop> ...
+
+Optimizing unit <deloop> ...
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/C_16> in Unit <top_level> is equivalent to the following 3 FFs/Latches, which will be removed : <encrypt/EL/C_28> <encrypt/EL/C_12> <encrypt/EL/C_8> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/C_17> in Unit <top_level> is equivalent to the following 2 FFs/Latches, which will be removed : <encrypt/EL/C_21> <encrypt/EL/C_13> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/C_18> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <encrypt/EL/C_14> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/C_19> in Unit <top_level> is equivalent to the following 4 FFs/Latches, which will be removed : <encrypt/EL/C_31> <encrypt/EL/C_27> <encrypt/EL/C_15> <encrypt/EL/C_11> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/C_24> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <encrypt/EL/C_20> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/C_25> in Unit <top_level> is equivalent to the following 2 FFs/Latches, which will be removed : <encrypt/EL/C_29> <encrypt/EL/C_9> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/tempC_21> in Unit <top_level> is equivalent to the following 2 FFs/Latches, which will be removed : <encrypt/EL/tempC_17> <encrypt/EL/tempC_13> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/tempC_18> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <encrypt/EL/tempC_14> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/tempC_24> in Unit <top_level> is equivalent to the following FF/Latch, which will be removed : <encrypt/EL/tempC_20> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/tempC_30> in Unit <top_level> is equivalent to the following 3 FFs/Latches, which will be removed : <encrypt/EL/tempC_26> <encrypt/EL/tempC_22> <encrypt/EL/tempC_10> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/tempC_31> in Unit <top_level> is equivalent to the following 4 FFs/Latches, which will be removed : <encrypt/EL/tempC_27> <encrypt/EL/tempC_19> <encrypt/EL/tempC_15> <encrypt/EL/tempC_11> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/tempC_28> in Unit <top_level> is equivalent to the following 3 FFs/Latches, which will be removed : <encrypt/EL/tempC_16> <encrypt/EL/tempC_12> <encrypt/EL/tempC_8> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/tempC_29> in Unit <top_level> is equivalent to the following 2 FFs/Latches, which will be removed : <encrypt/EL/tempC_25> <encrypt/EL/tempC_9> 
+INFO:Xst:2261 - The FF/Latch <encrypt/EL/C_10> in Unit <top_level> is equivalent to the following 3 FFs/Latches, which will be removed : <encrypt/EL/C_30> <encrypt/EL/C_26> <encrypt/EL/C_22> 
+INFO:Xst:3203 - The FF/Latch <basic_uart_inst/tx_state_ready> in Unit <top_level> is the opposite to the following FF/Latch, which will be removed : <basic_uart_inst/tx_state_fsm_state> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_level, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 440
+ Flip-Flops                                            : 440
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_level.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 990
+#      GND                         : 1
+#      INV                         : 20
+#      LUT1                        : 34
+#      LUT2                        : 133
+#      LUT3                        : 116
+#      LUT4                        : 104
+#      LUT5                        : 182
+#      LUT6                        : 255
+#      MUXCY                       : 59
+#      MUXF7                       : 23
+#      VCC                         : 1
+#      XORCY                       : 62
+# FlipFlops/Latches                : 440
+#      FD                          : 9
+#      FDC                         : 16
+#      FDCE                        : 150
+#      FDE                         : 178
+#      FDP                         : 2
+#      FDPE                        : 73
+#      FDRE                        : 8
+#      FDSE                        : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 39
+#      IBUF                        : 16
+#      IOBUF                       : 8
+#      OBUF                        : 9
+#      OBUFT                       : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             440  out of  54576     0%  
+ Number of Slice LUTs:                  844  out of  27288     3%  
+    Number used as Logic:               844  out of  27288     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    902
+   Number with an unused Flip Flop:     462  out of    902    51%  
+   Number with an unused LUT:            58  out of    902     6%  
+   Number of fully used LUT-FF pairs:   382  out of    902    42%  
+   Number of unique control sets:        33
+
+IO Utilization: 
+ Number of IOs:                          44
+ Number of bonded IOBs:                  40  out of    218    18%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+fx2Clk_in                          | BUFGP                  | 440   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.161ns (Maximum Frequency: 139.647MHz)
+   Minimum input arrival time before clock: 6.579ns
+   Maximum output required time after clock: 7.275ns
+   Maximum combinational path delay: 5.785ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fx2Clk_in'
+  Clock period: 7.161ns (frequency: 139.647MHz)
+  Total number of paths / destination ports: 37394 / 1011
+-------------------------------------------------------------------------
+Delay:               7.161ns (Levels of Logic = 6)
+  Source:            count_cycles_23 (FF)
+  Destination:       count_cycles_2 (FF)
+  Source Clock:      fx2Clk_in rising
+  Destination Clock: fx2Clk_in rising
+
+  Data Path: count_cycles_23 to count_cycles_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.995  count_cycles_23 (count_cycles_23)
+     LUT5:I0->O            1   0.203   0.808  GND_4_o_count_cycles[33]_equal_828_o<33>2_SW0 (N152)
+     LUT6:I3->O            9   0.205   0.830  GND_4_o_count_cycles[33]_equal_828_o<33>2 (GND_4_o_count_cycles[33]_equal_828_o<33>2)
+     LUT6:I5->O           15   0.205   0.982  n0006<33> (n0006)
+     LUT6:I5->O            2   0.205   0.721  Mmux_count_cycles[33]_GND_4_o_mux_1048_OUT1812_SW0 (N134)
+     LUT6:I4->O           18   0.203   1.050  Mmux_count_cycles[33]_GND_4_o_mux_1048_OUT1814 (Mmux_count_cycles[33]_GND_4_o_mux_1048_OUT181)
+     LUT2:I1->O            1   0.205   0.000  Mmux_count_cycles[33]_GND_4_o_mux_1048_OUT1021 (count_cycles[33]_GND_4_o_mux_1048_OUT<9>)
+     FDCE:D                    0.102          count_cycles_9
+    ----------------------------------------
+    Total                      7.161ns (1.775ns logic, 5.386ns route)
+                                       (24.8% logic, 75.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fx2Clk_in'
+  Total number of paths / destination ports: 832 / 398
+-------------------------------------------------------------------------
+Offset:              6.579ns (Levels of Logic = 5)
+  Source:            fx2GotData_in (PAD)
+  Destination:       fromhost_0 (FF)
+  Destination Clock: fx2Clk_in rising
+
+  Data Path: fx2GotData_in to fromhost_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            12   1.222   0.909  fx2GotData_in_IBUF (fx2GotData_in_IBUF)
+     LUT2:I1->O            1   0.205   0.684  chan_in[6]_h2fValid_AND_56_o_SW0 (N81)
+     LUT6:I4->O            3   0.203   0.651  chan_in[6]_h2fValid_AND_56_o (chan_in[6]_h2fValid_AND_56_o)
+     LUT6:I5->O            1   0.205   0.684  _n2989_inv_SW0_SW0 (N128)
+     LUT6:I4->O           32   0.203   1.291  _n2989_inv (_n2989_inv)
+     FDE:CE                    0.322          fromhost_0
+    ----------------------------------------
+    Total                      6.579ns (2.360ns logic, 4.219ns route)
+                                       (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fx2Clk_in'
+  Total number of paths / destination ports: 179 / 23
+-------------------------------------------------------------------------
+Offset:              7.275ns (Levels of Logic = 5)
+  Source:            count_o_0 (FF)
+  Destination:       led_out<7> (PAD)
+  Source Clock:      fx2Clk_in rising
+
+  Data Path: count_o_0 to led_out<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             22   0.447   1.134  count_o_0 (count_o_0)
+     LUT2:I1->O            6   0.205   1.109  count_o[3]_GND_4_o_add_562_OUT<1>1 (count_o[3]_GND_4_o_add_562_OUT<1>)
+     LUT6:I0->O            1   0.203   0.000  Mmux_GND_4_o_inputs[63]_Mux_1122_o_3 (Mmux_GND_4_o_inputs[63]_Mux_1122_o_3)
+     MUXF7:I1->O           1   0.140   0.684  Mmux_GND_4_o_inputs[63]_Mux_1122_o_2_f7 (GND_4_o_inputs[63]_Mux_1122_o)
+     LUT3:I1->O            1   0.203   0.579  Mmux_led_out81 (led_out_7_OBUF)
+     OBUF:I->O                 2.571          led_out_7_OBUF (led_out<7>)
+    ----------------------------------------
+    Total                      7.275ns (3.769ns logic, 3.505ns route)
+                                       (51.8% logic, 48.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 19 / 11
+-------------------------------------------------------------------------
+Delay:               5.785ns (Levels of Logic = 3)
+  Source:            fx2GotRoom_in (PAD)
+  Destination:       fx2Data_io<7> (PAD)
+
+  Data Path: fx2GotRoom_in to fx2Data_io<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   1.222   0.958  fx2GotRoom_in_IBUF (fx2GotRoom_in_IBUF)
+     LUT5:I4->O            9   0.205   0.829  comm_fpga_fx2/f2hReady_out_inv1 (comm_fpga_fx2/f2hReady_out_inv)
+     OBUFT:I->O                2.571          fx2Write_out_OBUFT (fx2Write_out)
+    ----------------------------------------
+    Total                      5.785ns (3.998ns logic, 1.787ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock fx2Clk_in
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+fx2Clk_in      |    7.161|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.03 secs
+ 
+--> 
+
+
+Total memory usage is 401644 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :   17 (   0 filtered)
+

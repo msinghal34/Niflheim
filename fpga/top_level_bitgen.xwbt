@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/guptaji/DLD_Proj/top_level.ncd
+OUTFILE=/home/guptaji/DLD_Proj/top_level.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=/home/guptaji/DLD_Proj
+LICENSE=WebPack
+USER_INFO=211460669_0_0_559
