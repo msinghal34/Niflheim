@@ -2,6 +2,8 @@
 **CS 254 DIGITAL LOGIC DESIGN LAB\
 Railway Signal Controller**
 
+Read [Problem Statement](./Statement.pdf) here
+
 ### VHDL COMPILATION
 Setting Constants in top_level.vhdl file
 1. Change the coordinates to whatever you want in line 141 in the signal.
@@ -26,6 +28,7 @@ In main.c change the path of "network.txt" with the appropriate path in line 126
 We have included a C file called "main.c" in the "C_Related_Files" folder. Copy this file into the "20140524/makestuff/apps/flcli" directory and from the same directory, run the "script.sh"
 
 This will compile the modified flcli executable, which can now be executed by running:
+
 `sudo ~/20140524/makestuff/apps/flcli/lin.x64/rel/flcli -v 1d50:602b:0002 -i 1443:0007`
 
 `sudo ~/20140524/makestuff/apps/flcli/lin.x64/rel/flcli -v 1d50:602b:0002 -y`
